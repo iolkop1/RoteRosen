@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.entity.Guest;
 import com.example.demo.service.GuestService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,7 +18,7 @@ public class GuestController {
      * @return
      */
     @PostMapping("/addGuest")
-    public Guest addGuest(@RequestBody Guest guest){
+    public ResponseEntity<String> addGuest(@RequestBody Guest guest){
         return service.saveGuest(guest);
     }
 
