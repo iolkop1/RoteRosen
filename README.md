@@ -9,6 +9,20 @@ Website for viewing and reservations at pension rote rosen. A guest user can vis
 - Reservation form
 - Admin BO acces
 
+## Endpoints
+
+POST /addRoom (/addGuest..)
+Adds a new room with the given description and price per night.
+
+GET /findRoomById/{id}
+Retrieves the room with the specified ID.
+
+PUT /update
+Updates the description of a room with the given ID.
+
+DELETE /delete/{id}
+Deletes the room with the specified ID.
+
 ## Tech
 
 - Java spring
